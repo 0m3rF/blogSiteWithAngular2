@@ -1,0 +1,36 @@
+<md-toolbar  id="upper_menu_toolbar">
+  <button style="visibility: hidden;float: right;padding: 0px !important;">
+      <md-icon>remove</md-icon>
+  </button>
+   <button  id="upper_menu_button" md-icon-button [mdMenuTriggerFor]="appMenu">
+   <md-icon>more_vert</md-icon>
+    </button>
+  <div class="upper_menu_container"> 
+ 
+
+      <span id="upper_menu_name">ÖFK BLOG</span>
+          <span class="upper_menu_spacer"></span>
+
+
+          <span id="upper_menu_button_group">
+            <button md-button>Button</button>   
+            <button md-button>Button1</button>   
+            <button md-button (click)="resetEP()">Reset Easy Point</button>   
+          </span>
+          
+    
+
+
+  </div>
+    <button id="upper_menu_sidenav_button"  md-icon-button (click)="toggleSidenav()">
+      <md-icon>menu</md-icon>
+    </button>
+</md-toolbar>
+
+
+<md-menu #appMenu="mdMenu">
+  <button md-menu-item> Settings </button>
+  <button md-menu-item (click)="scrollTo()"> Help </button>
+</md-menu>
+
+

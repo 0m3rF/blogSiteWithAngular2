@@ -1,0 +1,16 @@
+
+
+<div id="searchComp-input" > 
+    <md-icon id="searchComp-close">search</md-icon>
+    <input type="search"  placeholder="Search..."> 
+ </div>
+
+<div id="searchComp-resultWrapper" >
+     
+    <div class="searcComp-result col-md-3" *ngFor="let item of search" > 
+        <div class="searchComp-resultContent">
+            {{item}}
+        </div>
+    </div>
+
+</div>

@@ -1,0 +1,49 @@
+
+<div id="easy_point" (click)="easypointClick($event)" (dblclick)="easyPointDoubleClick($event)">
+<p class="easy_point_plus">+</p>
+
+ 
+
+
+<div [@easyPointTrigger]="animationState1" class="easy_point_element" (click)="toggleFader($event,0)">
+ <p class="easy_point_plus"><md-icon>search</md-icon></p>
+
+ </div>
+<div [@easyPointTrigger]="animationState2" class="easy_point_element" (click)="gotoMainPage($event)">
+ <p class="easy_point_plus"><md-icon>home</md-icon></p>
+
+</div>
+
+
+<div [@easyPointTrigger]="animationState3" class="easy_point_element" (click)="gotoContactMe($event)">
+ <p class="easy_point_plus"><md-icon>message</md-icon></p>
+
+
+
+</div>
+
+</div>
+
+
+    <div [@searchTrigger]="animationStateFader" class="fader"> 
+        
+    </div>
+
+    <div [@searchElementsTrigger]="animationStateSearchElements" class="elements-fader">
+            <search></search>
+    <button class="close-fader"  (click)="closeEveryThing()">
+        <md-icon>close</md-icon>
+    </button>
+    
+    </div>
+
+    <div [@searchElementsTrigger]="animationStateContactElements" class="elements-fader">
+            <contact></contact>
+    <button class="close-fader"  (click)="closeEveryThing()">
+        <md-icon>close</md-icon>
+    </button>
+       
+    </div>
+  
+    
+
