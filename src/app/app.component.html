@@ -1,37 +1,5 @@
-<upper-menu (scrollBottom)="scrollToBottom()" (sidenavEmitter)="toggleSidenav($event)">
+<upper-menu (scrollBottom)="scrollToBottom()" (sidenavEmitter)="toggleSidenav()">
 </upper-menu>
-
-
-<md-sidenav-container class="content_wrapper">
-
-  <md-sidenav #sidenav align="end"  class="my_sidenav">
-          <md-list>
-            <h3 md-subheader>Folders</h3>
-      <md-list-item *ngFor="let item of items">
-          <md-icon md-list-avatar>folder</md-icon>
-          <h4 md-line>{{item}}</h4>
-          <p md-line>Yazıasdasdasdsadsa</p>
-      </md-list-item>
-      </md-list>
-      <md-toolbar color="primary">
-        <md-icon>more_vert</md-icon>
-            <md-icon>menu</md-icon>
-      </md-toolbar>
-    </md-sidenav>
- 
-
- <div class="main_content_wrapper">
-
-<h1>
-  {{title}}
-</h1>
-
-<app-hello></app-hello>
-  <main-page-content></main-page-content>
-  
- </div>
-
-</md-sidenav-container>
 <easy-point></easy-point>
-<scroll-item></scroll-item>
- <div id="my_footer"></div>
+<router-outlet>
+</router-outlet>

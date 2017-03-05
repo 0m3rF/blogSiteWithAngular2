@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { MaterialModule } from '@angular/material';
+import { routes } from './app.router';
 
 import { AppComponent } from './app.component';
 import { HelloComponent } from './hello/hello.component';
@@ -13,6 +14,9 @@ import { MainPageContentComponent } from './main-page-content/main-page-content.
 import { ScrollItemComponent } from './scroll-item/scroll-item.component';
 import { SearchComponent } from './search/search.component';
 import { ContactComponent } from './contact/contact.component';
+import { SearchPageComponent } from './search-page/search-page.component';
+import { AdminPageComponent } from './admin-page/admin-page.component';
+import { MainPageComponent } from './main-page/main-page.component';
 
 @NgModule({
   declarations: [
@@ -23,10 +27,13 @@ import { ContactComponent } from './contact/contact.component';
     MainPageContentComponent,
     ScrollItemComponent,
     SearchComponent,
-    ContactComponent
+    ContactComponent,
+    SearchPageComponent,
+    AdminPageComponent,
+    MainPageComponent
   ],
   imports: [
-
+    routes,
     BrowserModule,
     FormsModule,
     HttpModule,

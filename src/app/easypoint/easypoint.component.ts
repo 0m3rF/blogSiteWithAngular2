@@ -1,5 +1,7 @@
 import {Component,Input,trigger,state,style,transition,animate,keyframes} from '@angular/core';
 import {CookieService} from 'angular2-cookie/core';
+import { Router } from '@angular/router';
+
 declare var $:any;
 
 /*
@@ -139,7 +141,7 @@ export class EasyPointComponent
   animationStateFader:string = "inactive";
   animationStateSearchElements:string = "inactive";
   animationStateContactElements:string = "inactive";
-  constructor(private _cookieService:CookieService)
+  constructor(private _cookieService:CookieService, private _router: Router)
   {
     EasyPointComponent._this = this;
   }
@@ -363,7 +365,7 @@ map = []; // to deal with multiple key detection
 
   gotoAdminPage(e)
   {
-    alert("This double click will open admin page");
+    this._router.navigate(['/admin']);
     if(e != null)
     e.stopPropagation();
   }

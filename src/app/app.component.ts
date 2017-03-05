@@ -1,4 +1,5 @@
-import { Component, ViewChild} from '@angular/core';
+import { Component, ViewChild } from '@angular/core';
+import { MainPageComponent} from './main-page/main-page.component'
 import { MdSidenav } from '@angular/material';
 
 declare var $ : any;
@@ -7,25 +8,19 @@ declare var $ : any;
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent {
-  title = 'aasdad worked!';
+export class AppComponent   {
 
-  @ViewChild('sidenav') elem:MdSidenav;
-  toggleSidenav($event)
-  {
-    this.elem.toggle();
-  }
+
   scrollToBottom()
   {
-
-
+    console.log("this is scroll to bottom in app compo");
     var ancPos = $("#anchor-bottom").position();
-
     window.scrollTo(0,ancPos.top);
-
-        console.log("emit catched");
-
   }
-  items =["1","2","3"];
-  name = 'Angular 2.4'; 
+
+  toggleSidenav()
+  {
+    MainPageComponent._this.toggleSidenav();
+  }
+
 }

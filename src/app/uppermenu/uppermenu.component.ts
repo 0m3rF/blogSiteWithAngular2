@@ -21,6 +21,8 @@ export class UpperMenuComponent  {
 
   toggleSidenav()
   {
+
+    
     this.sidenavEmitter.emit();
     this.isSidenavOpened = !this.isSidenavOpened;
 
@@ -35,6 +37,7 @@ export class UpperMenuComponent  {
   scrollTo()
   {
     this.scrollBottom.emit();
+    console.log("calistimi ?");
   }
 
   resetEP()
