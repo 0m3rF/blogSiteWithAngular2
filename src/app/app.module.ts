@@ -5,6 +5,7 @@ import { HttpModule } from '@angular/http';
 import { MaterialModule } from '@angular/material';
 import { routes } from './app.router';
 
+
 import { AppComponent } from './app.component';
 import { HelloComponent } from './hello/hello.component';
 import { UpperMenuComponent } from './uppermenu/uppermenu.component';
@@ -17,6 +18,8 @@ import { ContactComponent } from './contact/contact.component';
 import { SearchPageComponent } from './search-page/search-page.component';
 import { AdminPageComponent } from './admin-page/admin-page.component';
 import { MainPageComponent } from './main-page/main-page.component';
+import { AppService } from './app.service';
+
 
 @NgModule({
   declarations: [
@@ -39,7 +42,7 @@ import { MainPageComponent } from './main-page/main-page.component';
     HttpModule,
     MaterialModule.forRoot()
   ],
-  providers: [ CookieService ],
+  providers: [ CookieService , AppService ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
